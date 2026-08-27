@@ -37,7 +37,11 @@
     "electron-store": "^11.0.2",
     "googleapis": "^176.0.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "electron": "^44.0.0"
+    "react-dom": "^19.2.8"
+  },
+  "build": {
+    "electronDownload": {
+      "version": "44.0.0"
+    }
   }
 }

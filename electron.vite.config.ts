@@ -4,7 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  main: {},
+  main: {
+    vite: {
+      ssr: {
+        noExternal: []
+      }
+    }
+  },
   preload: {},
   renderer: {
     root: 'src/renderer',
