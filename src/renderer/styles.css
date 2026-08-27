@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root {
+  --overlay-opacity: 0.85;
+  --overlay-w: 420px;
+  --nb-border: 3px;
+  --nb-shadow: 6px 6px 0 #000;
+  --nb-radius: 14px;
+}
+
+* { scrollbar-width: thin; scrollbar-color: #000 #fef08a; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #000; border-radius: 999px; }

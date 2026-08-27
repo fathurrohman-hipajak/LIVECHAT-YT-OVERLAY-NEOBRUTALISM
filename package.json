@@ -1,0 +1,42 @@
+{
+  "name": "livechat-floating",
+  "version": "1.0.0",
+  "description": "Livechat floating overlay for OBS — Electron + Browser Source, YouTube LiveChat, neobrutalism",
+  "type": "module",
+  "private": true,
+  "packageManager": "bun",
+  "main": "out/main/index.js",
+  "scripts": {
+    "postinstall": "node scripts/patch-electron-vite.js || true; electron-builder install-app-deps 2>&1 | head -20; node node_modules/electron/install.js 2>&1 | tail -5 || true",
+    "dev": "bun run postinstall && electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "build:installer": "electron-builder",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "bun": ">=1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.4.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "4.3.4",
+    "autoprefixer": "^10.5.4",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "5.4.0"
+  },
+  "dependencies": {
+    "electron": "^44.0.0",
+    "electron-store": "^11.0.2",
+    "googleapis": "^176.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
