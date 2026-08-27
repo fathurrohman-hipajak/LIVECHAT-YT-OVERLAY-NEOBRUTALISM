@@ -1,0 +1,52 @@
+appId: com.fathurrohman.livechat-floating
+productName: Livechat Floating
+copyright: Copyright (c) 2026 Livechat Floating
+
+files:
+  - out/**
+  - "!out/renderer/**/*.map"
+  - package.json
+
+extraResources:
+  - from: resources/
+    to: resources
+    filter: ["**/*"]
+
+directories:
+  buildResources: build
+  output: dist
+
+mac:
+  target:
+    - target: dmg
+      arch: [x64, arm64]
+  icon: build/icon.png
+  category: public.app-category.utilities
+  darkModeSupport: false
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: build/icon.png
+
+linux:
+  target:
+    - target: AppImage
+      arch: [x64]
+  icon: build/icon.png
+  category: Utility
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+
+publish:
+  provider: github
+  owner: fathurrohman-hipajak
+  repo: LIVECHAT-YT-OVERLAY-NEOBRUTALISM

@@ -1,9 +1,9 @@
 {
   "name": "livechat-floating",
   "version": "1.0.0",
-  "description": "Livechat floating overlay for OBS — Electron + Browser Source, YouTube LiveChat, neobrutalism",
+  "description": "Livechat floating overlay for OBS \u2014 Electron + Browser Source, YouTube LiveChat, neobrutalism",
   "type": "module",
-  "private": true,
+  "private": false,
   "packageManager": "bun",
   "main": "out/main/index.js",
   "scripts": {
@@ -30,13 +30,14 @@
     "postcss": "^8.5.26",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "vite": "5.4.0"
+    "vite": "5.4.0",
+    "electron": "^44.0.0"
   },
   "dependencies": {
-    "electron": "^44.0.0",
     "electron-store": "^11.0.2",
     "googleapis": "^176.0.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "electron": "^44.0.0"
   }
 }
